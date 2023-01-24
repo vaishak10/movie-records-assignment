@@ -20,4 +20,8 @@ export const BodyContainer = styled.div`
 export const CardsContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(4,1fr);
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2,1fr);
+    }
 `

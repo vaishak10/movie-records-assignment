@@ -14,7 +14,6 @@ function Body() {
             async() => {
                 try {
                     const response = await fetchMovies()
-                    console.log(response.results)
                     setMovies(response.results)
                 } catch(err) {
                     console.log(err)

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { MovieDetails } from './style'
+import { MovieDetails, MovieLink } from './style'
 
 function MovieCard({details}: {details: any}) {
 
@@ -9,15 +9,23 @@ function MovieCard({details}: {details: any}) {
 
     return (
         <MovieDetails>
-            <p style={{fontWeight: '800', cursor: 'pointer'}}>
+            <MovieLink style={{fontWeight: '800', cursor: 'pointer'}}>
                 <Link
                     to={`/${movieId}`}
                 >
                     {details.title}
                 </Link>
-            </p>
-            <p><label>Director</label>: {details.director}</p>
-            <p><label>Producer</label>: {details.producer}</p>
+            </MovieLink>
+            <div style={{display: 'flex', placeContent: 'center', gap:'1rem'}}>
+                <div style={{display: 'grid', justifyItems: 'start', alignItems: 'center', fontSize: '12px'}}>
+                    <label style={{fontSize: '12px'}}>Director</label>
+                    <label style={{fontSize: '12px'}}>Producer</label>
+                </div>
+                <div style={{display: 'grid', justifyItems: 'start', gap:'6px', alignItems: 'start', textAlign: 'left'}}>
+                    <span>{details.director}</span>
+                    <span>{details.producer}</span>
+                </div>
+            </div>
         </MovieDetails>
     )
 }

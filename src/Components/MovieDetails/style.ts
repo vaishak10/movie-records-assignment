@@ -7,14 +7,16 @@ export const MovieDetails = styled.div`
     background-color: #93C6E7;
     border-radius: 6px;
     text-align: center;
-    padding: 0 1rem;
+    padding: 0.5rem;
 }
 `
 
-export const Link = styled.a`
-    text-decoration: none;
-    :hover {
-        text-decoration: underline;
+export const MovieLink = styled.p`
+    a{
+        text-decoration: none;
+        :hover {
+            text-decoration: underline;
+        }
     }
 `
 
@@ -31,4 +33,9 @@ export const Card = styled.div`
     :hover {
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.7);
     }
+`
+
+export const BackIcon = styled.div`
+    align-self: center;
+    cursor: pointer;
 `
